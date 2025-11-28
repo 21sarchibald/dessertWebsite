@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+
+:root {
+    --logo-pink: #F4989C;
+    --accent-green: #D6F6DD;
+    --accent-purple: #DAC3F7;
+    --accent-brown: #EBD2B4;
+    --accent-blue: #ACECF7;
+    --background-color: white;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    color: var(--logo-pink);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Rubik Bubbles', system-ui;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#search-button {
+    height: 30px;
+    width: 30px;
+    border: var(--accent-purple);
+    background-color: var(--accent-purple);
+    border-radius: 5px;
+}
+
+#search-button:hover {
+    cursor: pointer;
+}
+
+.search-bar svg {
+    color: white;
+}
+
+#search-input {
+    width: 50%;
+    height: 25px;
+    min-width: 250px;
+    border: solid 2px var(--accent-purple);
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Home page styles  */
+.home-cards-div {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-card {
+    border: solid 5px var(--accent-brown);
+    width: 300px;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.home-card h2 {
+    margin: 0px 0px 40px 0px;
+}
+
+.home-card a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px var(--accent-blue)
+}
+
+/* Favorites page styles */
+
+#favorites-heading {
+    text-align: center;
+}
+
+.favorites-card-div {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.favorites-card {
+    border: solid 5px var(--accent-blue);
+    width: 250px;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.favorites-card h2 {
+    margin: 0px 0px 40px 0px;
+}
+
+.favorites-card a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
