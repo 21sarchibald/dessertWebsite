@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --logo-pink: #F4989C;
@@ -8,6 +8,8 @@
     --accent-brown: #EBD2B4;
     --accent-blue: #ACECF7;
     --background-color: white;
+    --logo-font: 'Rubik Bubbles', system-ui;
+    --main-font: 'Sour Gummy', sans-serif;
 }
 
 /* Header styles */
@@ -18,11 +20,16 @@ header {
     align-items: center;
 }
 
+main {
+    text-align: center;
+    font-family: var(--main-font);
+}
+
 #logo {
     color: var(--logo-pink);
     text-decoration: none;
     font-size: 1.2rem;
-    font-family: 'Rubik Bubbles', system-ui;
+    font-family: var(--logo-font);
 }
 
 /* Search bar styles */
@@ -131,4 +138,32 @@ header {
     color: black;
     text-decoration: none;
     text-align: center;
+}
+
+/* Individual Dessert Page Styles */
+
+.individual-recipe-data {
+    border: solid 5px var(--accent-green);
+    border-radius: 25px;
+    padding: 20px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.individual-recipe-data img {
+    max-width: 80%;
+}
+
+#add-to-favorites-button {
+    color: white;
+    background-color: var(--logo-pink);
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--main-font);
+}
+
+#add-to-favorites-button:hover {
+    cursor: pointer;
 }
