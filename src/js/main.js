@@ -1,4 +1,4 @@
-import { generateRandomNumber } from "./utilities.mjs";
+import { generateRandomIndex } from "./utilities.mjs";
 
 // export async function loadDesserts() {
 //   const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
@@ -14,6 +14,6 @@ let desserts = JSON.parse(localStorage.getItem("desserts"));
 
 console.log(desserts[0]);
 
-console.log(generateRandomNumber(0, 116));
+console.log(generateRandomIndex);
 
-localStorage.setItem("favorites", "Cheesecake");
+localStorage.setItem("favorites", []);
