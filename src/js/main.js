@@ -16,4 +16,4 @@ console.log(desserts[0]);
 
 console.log(generateRandomIndex);
 
-localStorage.setItem("favorites", []);
+// localStorage.setItem("favorites", []);
