@@ -1,4 +1,4 @@
-import { generateRandomIndex } from "./utilities.mjs";
+import { generateRandomIndex } from "./src/js/utilities.mjs";
 
 // export async function loadDesserts() {
 //   const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
