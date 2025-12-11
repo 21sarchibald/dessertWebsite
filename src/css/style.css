@@ -89,10 +89,19 @@ main {
     margin: 0px 0px 40px 0px;
 }
 
+.home-card h2:hover {
+    cursor: pointer;
+    color: var(--logo-pink);
+}
+
 .home-card a {
     color: black;
     text-decoration: none;
     text-align: center;
+}
+
+.home-card a:hover {
+    color: var(--logo-pink);
 }
 
 .card-group {
@@ -103,6 +112,14 @@ main {
     padding: 10px;
     margin: 10px;
     border: solid 2px var(--accent-blue)
+}
+
+
+.card-group img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Favorites page styles */
@@ -141,7 +158,10 @@ main {
 }
 
 .favorites-card img {
-    width: 150px;
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Individual Dessert Page Styles */
@@ -170,4 +190,6 @@ main {
 
 #add-to-favorites-button:hover {
     cursor: pointer;
+    background-color: var(--accent-brown);
+    color: var(--logo-pink);
 }

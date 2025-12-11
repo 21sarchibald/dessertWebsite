@@ -1,7 +1,12 @@
-import { addToFavorites } from "./favorites.js";
-import { generateRandomIndex } from "./utilities.mjs";
+
+import { addToFavorites, generateRandomIndex, getParam, getRecipeInfoById } from "./utilities.mjs";
+
+const dessertId = getParam("dessertId");
+const dessert = await getRecipeInfoById(dessertId);
 
 function renderDessertInfo(dessert) {
+
+    document.title = `Sweets Saver | ${dessert.strMeal}`
 
     document.querySelector("#individual-page-img").src = dessert.strMealThumb;
     document.querySelector("#individual-page-img").alt = `Image of ${dessert.strMeal}`;
@@ -12,15 +17,10 @@ function renderDessertInfo(dessert) {
 let desserts = JSON.parse(localStorage.getItem("desserts"));
 console.log(desserts);
 
-let randomDessert = desserts[generateRandomIndex()];
-console.log(randomDessert);
 
-async function getRecipeInfoById(dessert) {
-    console.log(dessert.idMeal);
-    const response = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${dessert.idMeal}`);
-    const data = await response.json();
-    console.log(data);
-}
+// let randomDessert = desserts[generateRandomIndex()];
+// console.log(randomDessert);
 
-renderDessertInfo(randomDessert);
-getRecipeInfoById(randomDessert);
+
+renderDessertInfo(dessert.meals[0]);
+// getRecipeInfoById(randomDessert);

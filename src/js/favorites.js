@@ -35,4 +35,4 @@ export function addToFavorites(dessert) {
     localStorage.setItem("favorites", JSON.stringify(favoritesList));
 }
 
-loadFavorites();
+// loadFavorites();

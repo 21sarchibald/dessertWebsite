@@ -76,7 +76,7 @@ function populateDessertsCard(div) {
         let randomDessert = desserts[generateRandomIndex()];
 
         const formattedDessert = `
-        <a href="/dessert-pages/index.html?dessertId=${randomDessert.idMeal}">
+        <a href="dessert-pages/index.html?dessertId=${randomDessert.idMeal}">
         <article class="card-group">
         <h3>${randomDessert.strMeal}</h3>
         <img src="${randomDessert.strMealThumb}" alt="Image of ${randomDessert.strMeal}">
@@ -95,7 +95,7 @@ const popularHeading = document.querySelector("#popular-desserts-heading");
 popularHeading.addEventListener("click", () => populateDessertsCard(popularCard));
 
 const suggestedHeading = document.querySelector("#suggested-desserts-heading");
-popularHeading.addEventListener("click", () => populateDessertsCard(suggestedCard));
+suggestedHeading.addEventListener("click", () => populateDessertsCard(suggestedCard));
 
 populateDessertsCard(popularCard);
 populateDessertsCard(suggestedCard);
