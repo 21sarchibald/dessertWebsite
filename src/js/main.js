@@ -29,7 +29,7 @@ else {
     if (favorites.length == 1) {
         let recipe = favorites[0];
         recipeCards = `
-        <a href="dessert-pages/index.html?dessertId=${recipe.idMeal}">
+        <a href="src/dessert-pages/index.html?dessertId=${recipe.idMeal}">
         <article class="card-group">
         <h3>${recipe.strMeal}</h3>
         <img src="${recipe.strMealThumb}" alt="Image of ${recipe.strMeal}">
@@ -41,7 +41,7 @@ else {
         for (let i = 1; i > -1; i--) {
             let recipe = favorites[i];
             const formattedRecipe = `
-                <a href="dessert-pages/index.html?dessertId=${recipe.idMeal}">
+                <a href="src/dessert-pages/index.html?dessertId=${recipe.idMeal}">
                 <article class="card-group">
                 <h3>${recipe.strMeal}</h3>
                 <img src="${recipe.strMealThumb}" alt="Image of ${recipe.strMeal}">
@@ -58,7 +58,7 @@ else {
             let recipe = favorites[i];
 
             const formattedRecipe = `
-            <a href="dessert-pages/index.html?dessertId=${recipe.idMeal}">
+            <a href="src/dessert-pages/index.html?dessertId=${recipe.idMeal}">
             <article class="card-group">
             <h3>${recipe.strMeal}</h3>
             <img src="${recipe.strMealThumb}" alt="Image of ${recipe.strMeal}">
@@ -76,7 +76,7 @@ function populateDessertsCard(div) {
         let randomDessert = desserts[generateRandomIndex()];
 
         const formattedDessert = `
-        <a href="dessert-pages/index.html?dessertId=${randomDessert.idMeal}">
+        <a href="src/dessert-pages/index.html?dessertId=${randomDessert.idMeal}">
         <article class="card-group">
         <h3>${randomDessert.strMeal}</h3>
         <img src="${randomDessert.strMealThumb}" alt="Image of ${randomDessert.strMeal}">
