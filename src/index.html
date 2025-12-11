@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="main.js" type="module" defer></script>
+    <title>Sweets Saver | Home</title>
+</head>
+<body>
+    <header>
+        <a id="logo" href="index.html"><h1>Sweets Saver</h1></a>
+    </header>
+
+    <main>
+        <div class="search-bar">
+            <button id="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </button>
+            <input type="text" id="search-input" name="searchInput">
+        </div>
+
+        <div class="home-cards-div">
+            <section class="home-card" id="popular-desserts-container">
+                <h2 id="popular-desserts-heading">Popular Desserts</h2>
+                <div id="popular-desserts"></div>
+            </section>
+            <section class="home-card" id="favorites-cards-container">
+                <h2><a href="favorites">Your Favorites</a></h2>
+                <div id="favorite-desserts"></div>
+            </section>
+            <section class="home-card" id="suggested-desserts-container">
+                <h2 id="suggested-desserts-heading">Suggested for You</h2>
+                <div id="suggested-desserts"></div>
+            </section>
+        </div>
+
+    </main>
+</body> 
+</html>
