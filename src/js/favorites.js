@@ -14,9 +14,9 @@ async function loadFavorites() {
         const dessertDetails = await response.json();
         return `
         <section class="favorites-card">
-            <a href="#">
+            <a href="../dessert-pages/index.html?dessertId=${favorite.idMeal}">
                 <img src="${favorite.strMealThumb}" alt="placeholder-image">
-                <h3 class="favorites-recipee-name">${favorite.strMeal}</h3>
+                <h3 class="favorites-recipe-name">${favorite.strMeal}</h3>
             </a>
         </section>`
     })
@@ -35,4 +35,4 @@ export function addToFavorites(dessert) {
     localStorage.setItem("favorites", JSON.stringify(favoritesList));
 }
 
-// loadFavorites();
+loadFavorites();

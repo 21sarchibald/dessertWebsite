@@ -175,7 +175,8 @@ main {
 }
 
 .individual-recipe-data img {
-    max-width: 80%;
+    max-width: 300px;
+    width: 80%;
 }
 
 #add-to-favorites-button {
