@@ -179,6 +179,12 @@ main {
     width: 80%;
 }
 
+#ingredients-div ul {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
 #add-to-favorites-button {
     color: white;
     background-color: var(--logo-pink);
@@ -187,10 +193,59 @@ main {
     border-radius: 10px;
     font-size: 1rem;
     font-family: var(--main-font);
+    margin-top: 20px;
 }
 
 #add-to-favorites-button:hover {
     cursor: pointer;
     background-color: var(--accent-brown);
     color: var(--logo-pink);
+}
+
+#instructions-div {
+    margin-top: 20px;
+}
+#individual-page-source a, #individual-page-youtube a {
+    color: var(--accent-purple);
+}
+#individual-page-source a:hover, #individual-page-youtube a:hover {
+    color: var(--accent-brown);
+}
+
+@media screen and (min-width: 900px) {
+    .individual-recipe-data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #individual-page-img {
+        margin: 0 auto;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #individual-page-dessert-name {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    #individual-page-source {
+        grid-column: 1;
+    }
+    #individual-page-youtube {
+        grid-column: 1;
+    }
+    #ingredients-div {
+        grid-column: 2;
+        grid-row: 1/3;
+    }
+    #add-to-favorites-button {
+        grid-column: 1/3;
+        grid-row: 3;
+        width: 250px;
+        margin: 0 auto;
+    }
+    #instructions-div {
+        grid-column: 1/3;
+    }
+    #individual-page-source, #individual-page-youtube {
+        grid-column: 1/3;
+    }
 }

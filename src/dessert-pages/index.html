@@ -13,19 +13,21 @@
     </header>
 
     <main>
-        <div class="search-bar">
-            <button id="search-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-              </svg>
-            </button>
-            <input type="text" id="search-input" name="searchInput">
-        </div>
 
         <div class="individual-recipe-data">
             <img id="individual-page-img" src="https://placehold.co/500x300" alt="placeholder-image">
-            <h3 id="individual-page-dessert-name">Dessert Name</h3>
+            <h2 id="individual-page-dessert-name">Dessert Name</h2>
+            <div id="ingredients-div">
+                <h3>Ingredients</h3>
+                <ul id="ingredients-list"></ul>
+            </div>
             <button id="add-to-favorites-button">Add to Favorites</button>
+            <div id="instructions-div">
+                <h3>Instructions</h3>
+                <p id="instructions"></p>
+            </div>
+            <div id="individual-page-source">Recipe Source</div>
+            <div id="individual-page-youtube">Recipe Video Link</div>
         </div>
     </main>
 </body> 
