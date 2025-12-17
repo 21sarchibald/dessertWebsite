@@ -1,8 +1,9 @@
 
-import { addToFavorites, generateRandomIndex, getParam, getRecipeInfoById } from "./utilities.mjs";
+import { addToFavorites, removeFromFavorites, generateRandomIndex, getFavoritesList, getParam, getRecipeInfoById } from "./utilities.mjs";
 
 const dessertId = getParam("dessertId");
 const dessert = await getRecipeInfoById(dessertId);
+const favorites = getFavoritesList();
 
 function renderDessertInfo(dessert) {
 
@@ -14,14 +15,30 @@ function renderDessertInfo(dessert) {
     document.querySelector("#ingredients-list").innerHTML = buildIngredientsList(dessert);
     document.querySelector("#individual-page-source").innerHTML = `<a href="${dessert.strSource}">Source<a/>`;
     document.querySelector("#individual-page-youtube").innerHTML = `<a href="${dessert.strYoutube}">YouTube Link</a>`;
-    document.querySelector("#add-to-favorites-button").addEventListener("click", () => {addToFavorites(dessert)})
     document.querySelector("#instructions").textContent = `${dessert.strInstructions}`;
-
+    
     buildIngredientsList(dessert);
+
+    if (isFavorite(dessert.idMeal)) {
+        console.log("isFavorite");
+        document.querySelector("#add-remove-favorites-button").textContent = "Remove from Favorites";
+        document.querySelector("#add-remove-favorites-button").addEventListener("click", () => {removeFromFavorites(dessert)})
+
+    }
+    else {
+        console.log("isNotFavorite");
+        document.querySelector("#add-remove-favorites-button").textContent = "Add to Favorites";
+        document.querySelector("#add-remove-favorites-button").addEventListener("click", () => {addToFavorites(dessert)})
+        
+    }
 }
 
 let desserts = JSON.parse(localStorage.getItem("desserts"));
 console.log(desserts);
+
+function isFavorite(idMeal) {
+    return favorites.some(item => item.idMeal === idMeal)
+}
 
 function buildIngredientsList(dessert) {
     let ingredientList = [];

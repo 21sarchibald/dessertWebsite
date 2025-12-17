@@ -1,3 +1,6 @@
+
+let favorites = getFavoritesList();
+
 export function generateRandomIndex() {
     const upperLimit = 117;
     const lowerLimit = 0;
@@ -28,4 +31,17 @@ export function addToFavorites(dessert) {
     console.log(favoritesList);
     favoritesList.push(dessert);
     localStorage.setItem("favorites", JSON.stringify(favoritesList));
+    location.reload();
+}
+
+export function removeFromFavorites(dessert) {
+    const dessertId = dessert.idMeal;
+    let updatedFavorites = favorites.filter(item => item.idMeal != dessertId);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    location.reload();
+}
+
+export function getFavoritesList() {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    return favorites;
 }

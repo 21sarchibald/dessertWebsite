@@ -1,10 +1,12 @@
 // import { loadDesserts } from "./main"
 
+import { getFavoritesList } from "./utilities.mjs";
+
 // loadDesserts();
 
+let favorites = getFavoritesList();
+
 async function loadFavorites() {
-    // const favorites = localStorage.getItem("favorites");
-    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
     console.log("Favorites list from localStorage:")
     console.log(favorites)
 
@@ -25,14 +27,6 @@ async function loadFavorites() {
     const favoritesDisplay = favoritesCards.join('');
     console.log(favoritesDisplay);
     document.querySelector("#favorites-card-div").innerHTML = favoritesDisplay;
-}
-
-export function addToFavorites(dessert) {
-    let favoritesList = JSON.parse(localStorage.getItem("favorites") || "[]");
-    console.log("Favorites list");
-    console.log(favoritesList);
-    favoritesList.push(dessert);
-    localStorage.setItem("favorites", JSON.stringify(favoritesList));
 }
 
 loadFavorites();

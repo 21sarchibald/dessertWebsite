@@ -185,7 +185,7 @@ main {
     margin-right: 20%;
 }
 
-#add-to-favorites-button {
+#add-remove-favorites-button {
     color: white;
     background-color: var(--logo-pink);
     border: none;
@@ -196,7 +196,7 @@ main {
     margin-top: 20px;
 }
 
-#add-to-favorites-button:hover {
+#add-remove-favorites-button:hover {
     cursor: pointer;
     background-color: var(--accent-brown);
     color: var(--logo-pink);
@@ -236,7 +236,7 @@ main {
         grid-column: 2;
         grid-row: 1/3;
     }
-    #add-to-favorites-button {
+    #add-remove-favorites-button {
         grid-column: 1/3;
         grid-row: 3;
         width: 250px;

@@ -1,4 +1,4 @@
-import { generateRandomIndex } from "./utilities.mjs";
+import { generateRandomIndex, getFavoritesList } from "./utilities.mjs";
 
 export async function loadDesserts() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert');
@@ -16,7 +16,7 @@ let desserts = await JSON.parse(localStorage.getItem("desserts"));
 
 console.log(generateRandomIndex);
 
-const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+const favorites = getFavoritesList();
 let favoritesCards = document.querySelector("#favorites-cards-container");
 
 if (favorites.length == 0) {
